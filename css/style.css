@@ -122,6 +122,7 @@ span {
 }
 .home-content p {
   font-size: 1.6rem;
+  justify-content: left;
 }
 
 .social-media a{
@@ -214,6 +215,25 @@ span {
   transition: .5s ease;
 }
 
+.services-container .services-box .dialogs,
+.about-content .dialogs {
+  flex: 1 1 50rem;
+  background: var(--second-bg-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: .2rem solid var(--bg-color);
+  /* transition: .5s ease; */
+}
+.dialogs {
+  margin: auto;
+  align-items: center;
+  justify-content: center 
+}
+.dialogs::backdrop{
+  background-color: rgba(54, 57, 77,.7)
+}
+
 .services-container .services-box:hover {
   border-color: var(--main-color);
   transform: scale(1.05);
@@ -225,6 +245,11 @@ span {
 }
 
 .services-box h3 {
+  font-size: 2.6rem;
+}
+
+.dialogs h3 {
+  color: var(--main-color);
   font-size: 2.6rem;
 }
 
@@ -261,6 +286,7 @@ span {
   width: 100%;
   transition: .5s ease;
 }
+
 
 .portfolio-box:hover img {
   transform: scale(1.1);
@@ -493,6 +519,100 @@ span {
   .footer p{
     text-align: center;
     margin-top: 2rem;
+  }
+}
+
+
+.dialogs p {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
+  justify-content: left;
+  align-items: left;
+}
+.dialogs .web-d {
+  position: relative;
+  box-sizing: content-box;
+  
+}
+.dialogs .web-d i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 3.5rem;
+}
+.dialogs .web-d h2{
+  color: var(--text-color);
+  padding-top: 2px;
+  padding-bottom: 0;
+  font-size: 2rem;
+  justify-content: left;
+  align-items: left;
+}
+.dialogs p {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
+  justify-content: left;
+  align-items: left;
+}
+.dialogs .web-d {
+  position: relative;
+}
+.dialogs .web-d i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 3.5rem;
+  border-radius: 50%;
+  background: transparent;
+  border: .2rem solid var(--text-color);
+  border-radius: 50%;
+  color: var(--text-color);
+  margin: 3rem 1.5rem 3rem 0;
+}
+.dialogs .web-d i#okbtn:hover{
+  background: rgba(214, 54, 48, 0.973);
+  color: var(--main-color);
+  box-shadow: 0 0 1rem rgba(214, 54, 48, 0.973);
+}
+.dialogs .web-d i#okbtn0:hover{
+  background: rgba(214, 54, 48, 0.973);
+  color: var(--main-color);
+  box-shadow: 0 0 1rem rgba(214, 54, 48, 0.973);
+}
+.dialogs .web-d i#css,
+.dialogs .web-d i#html,
+.dialogs .web-d i#js{
+  position: relative;
+  border: none;
+  color: var(--main-color);
+}
+.dialogs .web-d .column .urlist {
+  position: relative;
+  color: var(--text-color);
+  justify-content: left;
+  align-items: left;
+  list-style: square;
+  font-size: 1.6rem;
+  padding: 0 0 0 0;
+  margin-top: 0;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
   }
 }
 

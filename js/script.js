@@ -55,3 +55,23 @@ const typed = new Typed('.multiple-text',{
     backDelay: 1000,
     loop: true
 });
+
+const showButton = document.getElementById('readmore');
+const favDialog = document.getElementById('favDialog');
+const okb = document.getElementById('okbtn');
+showButton.addEventListener('click', () => {
+  favDialog.showModal();
+});
+okb.addEventListener('click', () => {
+  favDialog.close();
+});
+
+const showButton0 = document.getElementById('abtreadmore');
+const favDialog0 = document.getElementById('aboutdialog');
+const okb0 = document.getElementById('okbtn0');
+showButton0.addEventListener('click', () => {
+  favDialog0.showModal();
+});
+okb0.addEventListener('click', () => {
+  favDialog0.close();
+});
