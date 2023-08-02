@@ -66,6 +66,26 @@ okb.addEventListener('click', () => {
   favDialog.close();
 });
 
+const showButton2 = document.getElementById('readmore2');
+const favDialog2 = document.getElementById('favDialog2');
+const okb2 = document.getElementById('okbtn2');
+showButton2.addEventListener('click', () => {
+  favDialog2.showModal();
+});
+okb2.addEventListener('click', () => {
+  favDialog2.close();
+});
+
+const showButton3 = document.getElementById('readmore3');
+const favDialog3 = document.getElementById('favDialog3');
+const okb3 = document.getElementById('okbtn3');
+showButton3.addEventListener('click', () => {
+  favDialog3.showModal();
+});
+okb3.addEventListener('click', () => {
+  favDialog3.close();
+});
+
 const showButton0 = document.getElementById('abtreadmore');
 const favDialog0 = document.getElementById('aboutdialog');
 const okb0 = document.getElementById('okbtn0');

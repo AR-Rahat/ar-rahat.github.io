@@ -581,6 +581,16 @@ span {
   color: var(--main-color);
   box-shadow: 0 0 1rem rgba(214, 54, 48, 0.973);
 }
+.dialogs .web-d i#okbtn2:hover{
+  background: rgba(214, 54, 48, 0.973);
+  color: var(--main-color);
+  box-shadow: 0 0 1rem rgba(214, 54, 48, 0.973);
+}
+.dialogs .web-d i#okbtn3:hover{
+  background: rgba(214, 54, 48, 0.973);
+  color: var(--main-color);
+  box-shadow: 0 0 1rem rgba(214, 54, 48, 0.973);
+}
 .dialogs .web-d i#css,
 .dialogs .web-d i#html,
 .dialogs .web-d i#js{
