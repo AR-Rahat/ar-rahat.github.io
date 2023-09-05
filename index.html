@@ -263,7 +263,7 @@
         <input type="email" placeholder="Email Address" id="add">
       </div>
       <div class="input-box">
-        <input type="number" placeholder="Mobile Number" id="connum">
+        <input type="tel" placeholder="Mobile Number" id="connum">
         <input type="text" placeholder="Email Subject" id="sub">
       </div>
       <textarea name="" id="msg" cols="30" rows="10" placeholder="Your Message"></textarea>
@@ -283,10 +283,10 @@
     </div>
   </footer>
 
-
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  
   <!-- custom js-->
   <script src="js/script.js"></script>
   <script>
@@ -304,13 +304,13 @@
       //console.log(name,add,connum,sub,msg);
       console.log(body);
       Email.send({
-        SecureToken : "f3ac08a6-838c-49bf-890f-c9b1db86fb06",
+        SecureToken : "47195f85-48f6-4355-9783-3669267d6c24",
         To : 'asfakurrahat7@gmail.com',
         From : "asfakur.rahat.portfolio@gmail.com",
         Subject : "Protfolio Contact Form",
-        Body : "And this is the body"
+        Body : body
       }).then(
-        console.log("Email Sent")
+        message => alert(message)
       );
 
     })
