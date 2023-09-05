@@ -300,13 +300,13 @@
       var sub = document.getElementById('sub').value;
       var msg = document.getElementById('msg').value;
 
-      var body = "Name: "+name+"\nEmail: "+add+"\nContact Number: "+connum+"\nSubject: "+sub+"\nMessage: "+msg;
+      var body = "Name: "+name+"<br>Email: "+add+"<br>Contact Number: "+connum+"<br>Subject: "+sub+"<br>Message: "+msg;
       //console.log(name,add,connum,sub,msg);
       console.log(body);
       Email.send({
-        SecureToken : "15d27522-b229-42a9-ae91-7a184678f03c",
+        SecureToken : "c9019eb5-d84b-4aea-8992-7f7b18a7aca0",
         To : 'asfakurrahat7@gmail.com',
-        From : "asfakur.rahat.portfolio@gmail.com",
+        From : "business777@asfakurrahat.me",
         Subject : "Protfolio Contact Form",
         Body : body
       }).then(
