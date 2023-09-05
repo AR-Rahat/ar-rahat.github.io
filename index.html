@@ -257,17 +257,17 @@
   <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span></h2>
 
-    <form action="#">
+    <form method="post">
       <div class="input-box">
-        <input type="text" placeholder="Full Name">
-        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Full Name" id="name">
+        <input type="email" placeholder="Email Address" id="add">
       </div>
       <div class="input-box">
-        <input type="number" placeholder="Mobile Number">
-        <input type="text" placeholder="Email Subject">
+        <input type="number" placeholder="Mobile Number" id="connum">
+        <input type="text" placeholder="Email Subject" id="sub">
       </div>
-      <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-      <input type="submit" value="Send Message" class="btn">
+      <textarea name="" id="msg" cols="30" rows="10" placeholder="Your Message"></textarea>
+      <button id="Contactbtn" class="btn">Send Message</button>
     </form>
   </section>
   
@@ -286,7 +286,34 @@
 
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <!-- custom js-->
   <script src="js/script.js"></script>
+  <script>
+    var btn = document.getElementById('Contactbtn');
+    btn.addEventListener('click',function(e){
+      e.preventDefault();
+      //console.log("clicked");
+      var name = document.getElementById('name').value;
+      var add = document.getElementById('add').value;
+      var connum = document.getElementById('connum').value;
+      var sub = document.getElementById('sub').value;
+      var msg = document.getElementById('msg').value;
+
+      var body = "Name: "+name+"\nEmail: "+add+"\nContact Number: "+connum+"\nSubject: "+sub+"\nMessage: "+msg;
+      //console.log(name,add,connum,sub,msg);
+      console.log(body);
+      Email.send({
+        SecureToken : "f3ac08a6-838c-49bf-890f-c9b1db86fb06",
+        To : 'asfakurrahat7@gmail.com',
+        From : "asfakur.rahat.portfolio@gmail.com",
+        Subject : "Protfolio Contact Form",
+        Body : "And this is the body"
+      }).then(
+        console.log("Email Sent")
+      );
+
+    })
+  </script>
 </body>
 </html>
