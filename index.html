@@ -300,6 +300,10 @@
       var sub = document.getElementById('sub').value;
       var msg = document.getElementById('msg').value;
 
+      if(name=="" || add=="" || connum=="" || sub=="" || msg==""){
+        alert("Please fill all the fields");
+        return;
+      }
       var body = "Name: "+name+"<br>Email: "+add+"<br>Contact Number: "+connum+"<br>Subject: "+sub+"<br>Message: "+msg;
       //console.log(name,add,connum,sub,msg);
       console.log(body);
